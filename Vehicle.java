@@ -13,6 +13,5 @@ public abstract class Vehicle {
         this.price = price;
     }
 
-    public abstract void displayVehicleDetails(); {
-    }
+    public abstract void displayVehicleDetails();
 }
