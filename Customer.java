@@ -18,7 +18,7 @@ public class Customer {
     }
     
     public void respondToOffer(Dealer dealer, Car car, Car alternative) {
-        if (car.isAvailable()) {
+        if (car.getQuantity() > 0) {
             System.out.println(name + " told " + dealer.getName() + " that they will take the " + car.getMake() + " " + car.getModel() + " and asked to ship it to " + address);
         } else {
             System.out.println(name + " told " + dealer.getName() + " that they are interested in the " + alternative.getMake() + " " + alternative.getModel() + " and asked to ship it to " + address);

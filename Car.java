@@ -1,11 +1,11 @@
 package IS202_EL_00000099782_Raiyan_week6;
 
 public class Car extends Vehicle {
-    private boolean availability;
+    private int quantity;
 
-    public Car(String make, String model, int year, double price, boolean availability) {
+    public Car(String make, String model, int year, double price, int quantity) {
         super(make, model, year, price);
-        this.availability = availability;
+        this.quantity = quantity;
     }
 
     @Override
@@ -45,12 +45,12 @@ public class Car extends Vehicle {
         this.price = price;
     }
 
-    public boolean isAvailable() {
-        return this.availability;
+    public int getQuantity() {
+        return this.quantity;
     }
 
-    public void setAvailability(boolean availability) {
-        this.availability = availability;
+    public void setQuantity(int quantity) {
+        this.quantity = quantity;
     }
 
 
