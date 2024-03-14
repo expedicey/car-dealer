@@ -1,5 +1,3 @@
-package IS202_EL_00000099782_Raiyan_week6;
-
 public class Customer {
     private String name;
     private String address;
@@ -17,7 +15,7 @@ public class Customer {
         System.out.println(name + " sent an inquiry: " + message);
     }
     
-    public void respondToOffer(Dealer dealer, Car car, Car alternative) {
+    public void respondToOffer(Dealer dealer, Vehicle car, Vehicle alternative) {
         if (car.getQuantity() > 0) {
             System.out.println(name + " told " + dealer.getName() + " that they will take the " + car.getMake() + " " + car.getModel() + " and asked to ship it to " + address);
         } else {
@@ -32,4 +30,13 @@ public class Customer {
     public String getAddress() {
         return address;
     }
+
+    public String getEmail() {
+        return this.email;
+    }
+
+    public String getPhoneNumber() {
+        return this.phoneNumber;
+    }
+
 }
