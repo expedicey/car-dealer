@@ -14,11 +14,11 @@ public class Customer {
         System.out.println();
     }
     
-    public void respondToOffer(Dealer dealer, Vehicle car, Vehicle alternative) {
-        if (car.getPrice() <= this.priceRange && car.getQuantity() > 0) {
+    public void respondToOffer(Dealer dealer, Car car, Car alternative) {
+        if (car.calculateTotalPrice() <= this.priceRange && car.getQuantity() > 0) {
             System.out.println(name + " told " + dealer.getName() + " that they will take the " + car.getMake() + " " + car.getModel() + " and asked to ship it to " + address);
             System.out.println();
-        } else if (alternative.getPrice() <= this.priceRange && alternative.getQuantity() > 0) {
+        } else if (alternative.calculateTotalPrice() <= this.priceRange && alternative.getQuantity() > 0) {
             System.out.println(name + " told " + dealer.getName() + " that they are interested in the " + alternative.getMake() + " " + alternative.getModel() + " and asked to ship it to " + address);
             System.out.println();
         } else {
