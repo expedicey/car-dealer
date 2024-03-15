@@ -33,6 +33,15 @@ public class Dealer {
         }
     }
 
+    public void repairCar(Car car) {
+        if (car.isDamaged()) {
+            car.repair();
+            System.out.println("The " + car.getMake() + " " + car.getModel() + " has been repaired.");
+        } else {
+            System.out.println("The " + car.getMake() + " " + car.getModel() + " does not need repairs.");
+        }
+    }
+
     public String getAddress() {
         return address;
     }
