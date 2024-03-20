@@ -1,10 +1,25 @@
 public class Dealer {
     private String name;
     private String address;
+    private Car[] cars;
+    private int carCount = 0;
 
     public Dealer(String name, String address) {
         this.name = name;
         this.address = address;
+        this.cars = new Car[10];
+    }
+
+    public void addCar(Car car) {
+        if (carCount == cars.length) {
+            Car[] temp = new Car[cars.length * 2];
+            for (int i = 0; i < carCount; i++) {
+                temp[i] = cars[i];
+            }
+            cars = temp;
+        }
+        cars[carCount] = car;
+        carCount++;
     }
 
     public void sellCar(Customer customer, Car car, Car alternative) {
@@ -37,15 +52,6 @@ public class Dealer {
             }
         }
         System.out.println();
-    }
-
-    public void repairCar(Car car) {
-        if (car.isDamaged()) {
-            car.repair();
-            System.out.println("The " + car.getMake() + " " + car.getModel() + " has been repaired.");
-        } else {
-            System.out.println("The " + car.getMake() + " " + car.getModel() + " does not need repairs.");
-        }
     }
 
     public String getAddress() {
